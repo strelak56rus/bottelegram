@@ -16,6 +16,7 @@ def welcome(message):
     markup.add(item1, item2, item3)
     bot.send_message(message.chat.id, 'Добро пожаловать, выбери нужную опцию.', reply_markup=markup)
 
+@bot.message_handler(content_types=['text'])
 def mainmenu(message):
     if message.chat.type == 'private':
         if message.text == '✉️ Информация':

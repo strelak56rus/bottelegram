@@ -13,7 +13,7 @@ def welcome(message):
     item1 = types.KeyboardButton("✉️ Информация")
     item2 = types.KeyboardButton("📡 Наш ВКонтакте")
     item3 = types.KeyboardButton("💵 Профиль")
-    markup.add(item1, item2)
+    markup.add(item1, item2, item3)
     bot.send_message(message.chat.id, 'Добро пожаловать, выбери нужную опцию.', reply_markup=markup)
 
 def mainmenu(message):

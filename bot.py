@@ -25,28 +25,24 @@ def mainmenu(message):
         elif message.text == '📡 Наш ВКонтакте':
             bot.send_message(message.chat.id, "Наш ВКонтакте: https://vk.com/ccoin.shop")
         
-        else:
-            bot.send_message(message.chat.id, "Ошибка.")
 
-
-@bot.message_handler(content_types=['text'])
-def profile(message):
-    if message.chat.type == 'private':
-        if message.text == '💵 Профиль':
+        elif message.text == '💵 Профиль':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             item1 = types.KeyboardButton("📈 Курс AppleCoin")
             item2 = types.KeyboardButton("🍏 Клик")
             item3 = types.KeyboardButton("✅ Сохранить")
             markup.add(item1, item2, item3)
             bot.send_message(message.chat.id, 'Привет, ты находишься в профиле, выбери то, что тебе нужно', reply_markup=markup)
-        if message.text == '📈 Курс AppleCoin':
+        elif message.text == '📈 Курс AppleCoin':
             bot.send_message(message.chat.id, '100 AC = 10000 CoronaCoin | 10 000 AC = 0.2 руб')
-        if message.text == '🍏 Клик':
+        elif message.text == '🍏 Клик':
             bot.send_message(message.chat.id, 'В разработке')
-        if message.text == '✅ Сохранить':
+        elif message.text == '✅ Сохранить':
             bot.send_message(message.chat.id, 'В разработке')
+
+
         else:
-            bot.send_message(message.chat.id, 'Команда не найдена.')
+            bot.send_message(message.chat.id, "Команда не найдена.")
 
 
 # RUN

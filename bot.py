@@ -27,6 +27,9 @@ def mainmenu(message):
         
         else:
             bot.send_message(message.chat.id, "Ошибка.")
+
+
+@bot.message_handler(content_types=['text'])
 def profile(message):
     if message.chat.type == 'private':
         if message.text == '💵 Профиль':

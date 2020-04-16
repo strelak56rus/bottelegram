@@ -2,7 +2,7 @@ import telebot
 import os
 
 token = os.environ.get('BOT_TOKEN')
-bot = telebot.Telebot(str(token))
+bot = telebot.TeleBot(str(token))
 
 @bot.message_handler(content_types=['text'])
 def lalala(message):

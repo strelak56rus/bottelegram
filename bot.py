@@ -34,7 +34,7 @@ def mainmenu(message):
             markup.add(item1, item2, item3)
             bot.send_message(message.chat.id, 'Привет, ты находишься в профиле, выбери то, что тебе нужно', reply_markup=markup)
         elif message.text == '📈 Курс AppleCoin':
-            bot.send_message(message.chat.id, '1000 AC = 1 000 000 CoronaCoin | 5 000 AC = 1 руб')
+            bot.send_message(message.chat.id, '1000 AC = 1 000 000 CoronaCoin | 1 руб = 5 000 AC')
         elif message.text == '🍏 Клик':
             bot.send_message(message.chat.id, 'В разработке')
         elif message.text == '✅ Сохранить':

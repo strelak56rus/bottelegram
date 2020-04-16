@@ -39,6 +39,8 @@ def general(message):
             bot.send_message(message.chat.id, 'В разработке')
         elif message.text == '✅ Баланс':
             bot.send_message(message.chat.id, 'Баланс: 0 AC')
+        elif message.text == 'randomkey':
+            bot.send_message(message.chat.id, 'Рандомный сгенерированный ключ:', str(random.randint(000000000,999999999)))
 
 
         else:

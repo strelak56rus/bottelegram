@@ -1,5 +1,6 @@
 import telebot 
 import os
+import random
 
 from telebot import types
 
@@ -8,7 +9,7 @@ bot = telebot.TeleBot(str(token))
 
 
 @bot.message_handler(commands=['start'])
-def welcome(message):
+def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("✉️ Информация")
     item2 = types.KeyboardButton("📡 Наш ВКонтакте")
@@ -23,8 +24,26 @@ def mainmenu(message):
             bot.send_message(message.chat.id, "Привет")
         elif message.text == '📡 Наш ВКонтакте':
             bot.send_message(message.chat.id, "Наш ВКонтакте: https://vk.com/ccoin.shop")
-        elif message.text == '💵 Профиль':
-            bot.send_message(message.chat.id, "В разработке")
+        
+        else:
+            bot.send_message(message.chat.id, "Ошибка.")
+def profile(message):
+    if message.chat.type == 'private':
+        if message.text == '💵 Профиль':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton("📈 Курс AppleCoin")
+            item2 = types.KeyboardButton("🍏 Клик")
+            item3 = types.KeyboardButton("✅ Сохранить")
+            markup.add(item1, item2, item3)
+            bot.send_message(message.chat.id, 'Привет, ты находишься в профиле, выбери то, что тебе нужно', reply_markup=markup)
+        if message.text == '📈 Курс AppleCoin':
+            bot.send_message(message.chat.id, '100 AC = 10000 CoronaCoin | 10 000 AC = 0.2 руб')
+        if message.text == '🍏 Клик':
+            bot.send_message(message.chat.id, 'В разработке')
+        if message.text == '✅ Сохранить':
+            bot.send_message(message.chat.id, 'В разработке')
+        else:
+            bot.send_message(message.chat.id, 'Команда не найдена.')
 
 
 # RUN

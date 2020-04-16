@@ -21,7 +21,7 @@ def start(message):
 def mainmenu(message):
     if message.chat.type == 'private':
         if message.text == '✉️ Информация':
-            bot.send_message(message.chat.id, "Привет")
+            bot.send_message(message.chat.id, "Привет, это игровой бот с валютой APPLECOIN, вы можете кликать эту валюту, и её можно обменять на CoronaCoin, и на другие валюты. Успей заработать много AC, и поделиться с друзьями!)")
         elif message.text == '📡 Наш ВКонтакте':
             bot.send_message(message.chat.id, "Наш ВКонтакте: https://vk.com/ccoin.shop")
         
@@ -34,7 +34,7 @@ def mainmenu(message):
             markup.add(item1, item2, item3)
             bot.send_message(message.chat.id, 'Привет, ты находишься в профиле, выбери то, что тебе нужно', reply_markup=markup)
         elif message.text == '📈 Курс AppleCoin':
-            bot.send_message(message.chat.id, '100 AC = 10000 CoronaCoin | 10 000 AC = 0.2 руб')
+            bot.send_message(message.chat.id, '1000 AC = 100 000 CoronaCoin | 10 000 AC = 0.2 руб')
         elif message.text == '🍏 Клик':
             bot.send_message(message.chat.id, 'В разработке')
         elif message.text == '✅ Сохранить':

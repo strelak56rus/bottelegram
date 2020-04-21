@@ -2,3 +2,5 @@ aiohttp
 websockets
 chardet
 pyTelegramBotAPI
+colorama
+apihelper

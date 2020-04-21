@@ -3,4 +3,9 @@ websockets
 chardet
 pyTelegramBotAPI
 colorama
-apihelper
+requests
+random
+datetime
+sys
+time
+argparse

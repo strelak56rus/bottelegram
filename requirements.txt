@@ -4,8 +4,4 @@ chardet
 pyTelegramBotAPI
 colorama
 requests
-random
-datetime
-sys
-time
 argparse

@@ -17,10 +17,9 @@ conn = connect_sql.connect(
         user = DB_NAME,
         passwd = DB_PASS,
         database = DB_NAME
-
-
-# Handle '/start' and '/help'
-@bot.message_handler(commands=['help', 'start'])
+	
+	
+	
 
 apihelper.ENABLE_MIDDLEWARE = True
 

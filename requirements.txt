@@ -5,3 +5,8 @@ pyTelegramBotAPI
 colorama
 requests
 argparse
+mysql-connector-python-rf
+mysql-connector-python
+mysql-connector
+mysql
+mysqlclient

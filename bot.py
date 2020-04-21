@@ -1,11 +1,22 @@
 import telebot
 import os
 import requests, random, datetime, sys, time, argparse, os
+import mysql.connector as connect_sql
+
 from telebot import apihelper
 from colorama import Fore, Back, Style
+
 API_TOKEN = os.environ.get('BOT_TOKEN')
+DB_NAME = os.environ.get('DB_NAME')
+DB_PASS = os.environ.get('DB_PASS')
 
 bot = telebot.TeleBot(API_TOKEN)
+
+conn = connect_sql.connect(
+        host = 'remotemysql.com',
+        user = DB_NAME,
+        passwd = DB_PASS,
+        database = DB_NAME
 
 
 # Handle '/start' and '/help'

@@ -19,25 +19,6 @@ conn = connect_sql.connect(
         database = DB_NAME
 	
 
-INFO_STATE = 'ON_INFO_MENU'
-MAIN_STATE = 'ON_MAIN_MENU'
-
-SESSIONS = {
-    -10000: {
-        'state': INFO_STATE
-    },
-    -11111: {
-        'state': MAIN_STATE
-    }
-}
-
-
-def get_or_create_session(user_id):
-    try:
-        return SESSIONS[user_id]
-    except KeyError:
-        SESSIONS[user_id] = {'state': MAIN_STATE}
-        return SESSIONS[user_id]
 
 # Handle all other messages with content_type 'text' (content_types defaults to ['text'])
 @bot.message_handler(func=lambda message: True)

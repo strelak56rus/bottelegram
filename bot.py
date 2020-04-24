@@ -3,8 +3,8 @@ import os
 import requests, random, datetime, sys, time, argparse, os
 import mysql.connector as connect_sql
 
-from telebot import apihelper
 from colorama import Fore, Back, Style
+from telebot import types
 
 API_TOKEN = os.environ.get('BOT_TOKEN')
 DB_NAME = os.environ.get('DB_NAME')
@@ -20,8 +20,7 @@ conn = connect_sql.connect(
 	
 
 
-# Handle all other messages with content_type 'text' (content_types defaults to ['text'])
-@bot.message_handler(func=lambda message: True)
+@bot.message_handler(content_types=['text'])
 def echo_message(message):
     _phone = message.text
     if _phone[0] == '+':

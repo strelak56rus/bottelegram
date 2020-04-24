@@ -18,10 +18,6 @@ conn = connect_sql.connect(
         passwd = DB_PASS,
         database = DB_NAME
 	
-	
-	
-
-apihelper.ENABLE_MIDDLEWARE = True
 
 INFO_STATE = 'ON_INFO_MENU'
 MAIN_STATE = 'ON_MAIN_MENU'

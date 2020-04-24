@@ -356,8 +356,8 @@ def echo_message(message):
         except:
             print('[-] Не отправлено!')
         i = i-1
-        print('Круг пройден ' + 5-i)
-		if(i == 5):
+        print('Круг пройден ' + 3-i)
+		if(i == 3):
 			
     
 
